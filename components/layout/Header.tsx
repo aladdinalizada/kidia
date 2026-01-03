@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full border-b">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+    <header className="w-full">
+      <div className="container mx-auto flex items-center justify-between px-16 py-6">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-orange-500">
-          kidia
+        <Link href="/">
+          <Image src="/logo.png" alt="Kidia Logo" width={120} height={40} />
         </Link>
 
         {/* Desktop Menu */}
@@ -57,7 +58,7 @@ export default function Header() {
           ))}
           <Link
             href="/login"
-            className="block text-center rounded-full bg-orange-500 py-2 text-white"
+            className="block text-center rounded-lg bg-orange-500 py-2 text-white"
           >
             Daxil ol
           </Link>
